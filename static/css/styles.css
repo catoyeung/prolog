@@ -303,6 +303,7 @@ footer {
   padding-right: 8px;
   padding-top: 3px;
   padding-bottom: 4px;
+  box-sizing: border-box;
 }
 
 #content {
@@ -336,7 +337,6 @@ footer {
 
 #portfolioList table tr.header-row{
   background: #EAEEF0;
-  border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
 
