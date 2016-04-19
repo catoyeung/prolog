@@ -1,0 +1,382 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  width: 100%;
+  font-weight: 300;
+}
+
+input, select, textarea, button{
+  font-family:inherit;
+  font-weight: inherit;
+}
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  height: 60px;
+  width: 100%;
+  background: #F7F7F7;
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  padding: 0 50px;
+  border-bottom: 5px solid #494949;
+}
+
+header #logo {
+  line-height: 55px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  float: left;
+}
+
+footer {
+  height: 60px;
+  width: 100%;
+  background: #F7F7F7;
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 0 50px;
+  line-height: 55px;
+  font-size: 16px;
+  border-top: 5px solid #000;
+  color: #000;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+#copyright {
+  float: left;
+}
+
+#footer-nav-div {
+  float: right;
+}
+
+#footer-nav-div nav li {
+  float: left;
+  margin-left: 20px;
+}
+
+#wrapper {
+  padding: 60px 0;
+  position: relative;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+#login-page #wrapper {
+  background: url('../img/login-bg.jpg');
+  background-size: cover;
+}
+
+#login-page #content {
+  padding: 0 50px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+#login-div {
+  width: 400px;
+  height: 280px;
+  margin: 120px auto 0 auto;
+  border: 1px solid rgba(220, 220, 220, 0.5);
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#login-div #title {
+  padding: 30px 40px;
+  font-size: 30px;
+
+}
+
+#login-div table{
+  width: 300px;
+  border-collapse: separate;
+}
+
+#login-div table td{
+  height: 32px;
+  width: 245px;
+}
+
+#login-div table tr td:first-child{
+  height: 32px;
+  width: 35px;
+  vertical-align: middle;
+}
+
+#login-div table td input{
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: none;
+}
+
+#login-div table tr:first-child td:first-child{
+  border: 2px solid #ccc;
+  border-top-left-radius: 5px;
+  border-right: none;
+  border-bottom: none;
+}
+
+#login-div table tr:first-child td:nth-child(2){
+  border: 2px solid #ccc;
+  border-top-right-radius: 5px;
+  border-left: none;
+  border-bottom: none;
+}
+
+#login-div table tr:nth-child(2) td:first-child{
+  border: 2px solid #ccc;
+  border-bottom-left-radius: 5px;
+  border-right: none;
+}
+
+#login-div table tr:nth-child(2) td:nth-child(2){
+  border: 2px solid #ccc;
+  border-bottom-right-radius: 5px;
+  border-left: none;
+}
+/*#login-div table td input[name='username']{
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#login-div table td input[name='password']{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}*/
+
+#login-div .login-btn {
+  background: #4197EE;
+  color: #fff;
+  border: 1px solid #1C76BE;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+#login-div .login-btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px #3593E5;
+}
+
+#current-area {
+  width: 360px;
+  margin: auto;
+  font-size: 24px;
+  line-height: 55px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+#current-area img {
+  vertical-align: middle;
+}
+
+#main-nav {
+  width: 360px;
+  margin: auto;
+  font-size: 24px;
+  line-height: 55px;
+  background: #494949;
+  border: 1px solid #313131;
+  border-top: none;
+  border-radius: 0px 0px 5px 5px;
+  box-shadow: 0px 8px 10px -6px rgba(50, 50, 50, 0.5);
+  color: #F7F7F7;
+  display: none;
+}
+
+#main-nav ul li {
+  width: 100%;
+  text-align: center;
+}
+
+#main-nav ul li:hover {
+  color: #3887FF;
+}
+
+#account-div {
+  float: right;
+  font-size: 16px;
+  line-height: 55px;
+  text-align: right;
+  height: auto;
+  width: 100px;
+}
+
+#account-div img {
+  vertical-align: middle;
+}
+
+#account-div ul {
+  width: 100px;
+  padding-right: 11px;
+  background: #494949;
+  border: 1px solid #313131;
+  border-top: none;
+  border-radius: 0px 0px 5px 5px;
+  box-shadow: 0px 8px 10px -6px rgba(50, 50, 50, 0.5);
+  color: #F7F7F7;
+  display: none;
+}
+
+#account-div .logout {
+  background: transparent url("/static/img/account-logout.png") no-repeat scroll 12px 16px;
+}
+
+#navigation-page #wrapper {
+  background: transparent url("/static/img/bg.jpg");
+}
+
+#menuCell {
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  background: #EAEEF0;
+  border-bottom: 1px solid #CCC;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#menuSandwich {
+  margin-left: 10px;
+  float: left;
+}
+
+#menuSandwich a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  background: url('/static/img/sandwich.png') 0 4px no-repeat;
+}
+
+#menuSandwich a:hover {
+  background: url('/static/img/sandwich-hover.png') 0 4px no-repeat;
+}
+
+#menuCurrent {
+  color: #005495;
+  float: left;
+  font-weight: bold;
+}
+
+#menuCell #controls {
+  float: right;
+}
+
+#menuCell #controls ul li {
+  float: left;
+  height: 32px;
+  vertical-align: middle;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+}
+
+#content {
+  padding: 0 50px;
+}
+
+#tabWrapper {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  background: #EAEEF0;
+}
+
+#portfolioList {
+  background: #fff;
+  width: 100%;
+  min-height: 500px;
+}
+
+#portfolioList table{
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  border: collapse;
+  table-layout: fixed;
+  float: left;
+  display: table;
+  border-collapse: collpase;
+}
+
+#portfolioList table tr.header-row{
+  background: #EAEEF0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+#portfolioList table th{
+  text-align: left;
+  background: #F7F7F7;
+  font-weight: bold;
+  padding: 3px;
+}
+
+#portfolioList table td{
+  line-height: 50px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #FCFCFC;
+}
+
+#portfolioList table td img {
+  display: block;
+}
+
+#portfolioList table td.access-btn {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#portfolioList table td.access-btn img {
+  margin: auto;
+}
+
+#portfolioList table td.edit-btn {
+  vertical-align: middle;
+}
+
+#formPageFooter {
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  background: #EAEEF0;
+  border-top: 1px solid #CCC;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}

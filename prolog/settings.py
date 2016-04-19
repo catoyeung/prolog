@@ -55,7 +55,10 @@ ROOT_URLCONF = 'prolog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [''],
+        'DIRS': ['',
+            os.path.join(BASE_DIR, 'staticpages', 'templates'),
+            os.path.join(BASE_DIR, 'navigation', 'templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

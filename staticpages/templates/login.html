@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<head>
+  <title>Prolog Converge</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static "css/reset.css" %}">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
+</head>
+<body id="navigation-page">
+  <div id="wrapper">
+    <header>
+      <div id="logo">
+        <a href="#">Trimble</a>
+      </div>
+
+      <div id="account-div">
+        <a href="#">{{ username }}</a>
+        <img src="{% static 'img/area-menu-drop-down-arrow.png' %}" />
+        <ul>
+          <li class="logout"><a href="#">Logout</a></li>
+        </ul>
+      </div>
+      <div id="current-area">
+        <a href="#">Portfolio</a>
+        <img src="{% static 'img/area-menu-drop-down-arrow.png' %}" />
+      </div>
+      <nav id="main-nav">
+        <ul>
+          <li class="current"><a href="#">Portfolio</a></li>
+          <li><a href="#">Insights</a></li>
+          <li><a href="#">Project</a></li>
+          <li><a href="#">Reports</a></li>
+          <li><a href="#">Administration</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <div id="content">
+        <div id="tabWrapper">
+          <div class="tab current" tabName="Portfolio">
+            <div id="formPage">
+              <div id="menuCell">
+                <div id="menuSandwich">
+                  <a href="#">
+                  </a>
+                </div>
+                <div id="menuCurrent">
+                  All Active Projects
+                </div>
+                <div id="controls">
+                  <ul>
+                    <li class="create-btn">
+                      <img src="/static/img/create.png"/>
+                    </li>
+                    <li class="refresh-btn">
+                      <img src="/static/img/refresh.png"/>
+                    </li>
+                    <li class="export-btn">
+                      <img src="/static/img/export.png"/>
+                    </li>
+                    <li class="filter-btn">
+                      <img src="/static/img/filter.png"/>
+                    </li>
+                    <li class="more-btn">
+                      <img src="/static/img/more.png"/>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="portfolioList">
+                <table cellpadding="0" cellspacing="0">
+                  <tr class="header-row">
+                    <th></th>
+                    <th class="alignLeft">Edit</th>
+                    <th>Number</th>
+                    <th>Name</th>
+                    <th>Type Of Building</th>
+                    <th>Project Status</th>
+                  </tr>
+                  <tr class="content-row">
+                    <td class="access-btn"><img src="/static/img/access.png" /></td>
+                    <td class="edit-btn"><img src="/static/img/open-form.png" /></td>
+                    <td>0002</td>
+                    <td>GME Ltd.</td>
+                    <td>Excavation</td>
+                    <td>In Progress</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>0003</td>
+                    <td>Job 056</td>
+                    <td>Excavation</td>
+                    <td>In Progress</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>0004</td>
+                    <td>Job 060</td>
+                    <td>Excavation</td>
+                    <td>In Progress</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>0005</td>
+                    <td>Job 076</td>
+                    <td>Excavation</td>
+                    <td>In Progress</td>
+                  </tr>
+                </table>
+              </div>
+              <div id="formPageFooter">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div id="copyright">Cato Yeung@2016</div>
+      <div id="footer-nav-div">
+        <nav>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </div>
+  <script src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+  <script>
+  $(document).ready(function() {
+    $("#current-area").click(function(event) {
+      event.preventDefault();
+      if ($("#main-nav").css('display') == 'none') {
+        $("#main-nav").css('display', 'block');
+        var autoHeight = $("#main-nav").css('height');
+        $("#main-nav").css('height', 0);
+        $("#main-nav").animate({
+          height: autoHeight
+        });
+      } else {
+        $("#main-nav").css('display', 'none');
+      }
+
+    });
+
+    $("header").mouseleave(function() {
+      $("#main-nav").css('display', 'none');
+    });
+
+    $("#account-div").click(function(event) {
+      event.preventDefault();
+      if ($("#account-div ul").css('display') == 'none') {
+        $("#account-div ul").css('display', 'block');
+        var autoHeight = $("#account-div ul").css('height');
+        $("#account-div ul").css('height', 0);
+        $("#account-div ul").animate({
+          height: autoHeight
+        });
+      } else {
+        $("#account-div ul").css('display', 'none');
+      }
+    });
+
+    $("#account-div").mouseleave(function() {
+      $("#account-div ul").css('display', 'none');
+    });
+  });
+  </script>
+</body>
+</html>

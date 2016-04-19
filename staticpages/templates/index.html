@@ -3,8 +3,58 @@
 	<title>Prolog Converge</title>
 	{% load staticfiles %}
 	<link rel="stylesheet" type="text/css" href="{% static "css/reset.css" %}">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
 </head>
-<body>
-	Hello
+<body id="login-page">
+	<div id="wrapper">
+		<header>
+			<div id="logo">
+				<a href="#">Trimble</a>
+			</div>
+		</header>
+		<section>
+			<div id="content">
+				<div id="login-div">
+					<div id="title">Prolog Converge Login</div>
+					<form action="/login/" method="post">
+						{% csrf_token %}
+						<table class="center">
+							<tr>
+								<td>
+									<img src="{% static 'img/login-username.png' %}" />
+								</td>
+								<td>
+									<input name="username" placeholder="username"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="{% static 'img/login-password.png' %}" />
+								</td>
+								<td>
+									<input name="password" placeholder="password" type="password"/>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2"><input class="login-btn" type="submit" value="Login"/></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div id="copyright">Cato Yeung@2016</div>
+			<div id="footer-nav-div">
+				<nav>
+					<ul>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Help</a></li>
+					</ul>
+				</nav>
+			</div>
+		</footer>
+	<div>
 </body>
 </html>
