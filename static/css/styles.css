@@ -216,6 +216,8 @@ footer {
   box-shadow: 0px 8px 10px -6px rgba(50, 50, 50, 0.5);
   color: #F7F7F7;
   display: none;
+  position: relative;
+  z-index: 9999;
 }
 
 #main-nav ul li {
@@ -234,6 +236,8 @@ footer {
   text-align: right;
   height: auto;
   width: 100px;
+  position: relative;
+  z-index: 9999;
 }
 
 #account-div img {
@@ -262,29 +266,29 @@ footer {
 
 #menuCell {
   width: 100%;
-  height: 32px;
-  line-height: 32px;
+  height: 35px;
+  line-height: 35px;
   background: #EAEEF0;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 	position: relative;
 }
 
-#menuSandwich {
+.menuSandwich {
   margin-left: 10px;
   float: left;
 }
 
-#menuSandwich a {
+.menuSandwich a {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 35px;
+  height: 35px;
   text-indent: -9999px;
-  background: url('/static/img/sandwich.png') 0 4px no-repeat;
+  background: url('/static/img/sandwich.png') 0 6px no-repeat;
 }
 
-#menuSandwich a:hover {
-  background: url('/static/img/sandwich-hover.png') 0 4px no-repeat;
+.menuSandwich a:hover {
+  background: url('/static/img/sandwich-hover.png') 0 6px no-repeat;
 }
 
 #menuCurrent {
@@ -298,11 +302,11 @@ footer {
 
 #menuCell #controls ul li {
   float: left;
-  height: 32px;
+  height: 35px;
   vertical-align: middle;
   padding-left: 8px;
   padding-right: 8px;
-  padding-top: 3px;
+  padding-top: 5px;
   padding-bottom: 4px;
   box-sizing: border-box;
 }
@@ -317,15 +321,16 @@ footer {
   border: 1px solid #CCC;
   border-radius: 5px;
   background: #EAEEF0;
+  z-index: 500;
 }
 
-#portfolioList {
+.portfolioList {
   background: #fff;
   width: 100%;
 	position: relative;
 }
 
-#portfolioList table{
+.portfolioList table{
   width: 100%;
   height: 100%;
   text-align: left;
@@ -334,38 +339,38 @@ footer {
 	z-index: 1000;
 }
 
-#portfolioList table tr.header-row{
+.portfolioList table tr.header-row{
   background: #EAEEF0;
   border-bottom: 1px solid #ccc;
 }
 
-#portfolioList table th{
+.portfolioList table th{
   text-align: left;
   background: #F7F7F7;
   padding: 3px;
 }
 
-#portfolioList table td{
+.portfolioList table td{
   line-height: 50px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   background: #FCFCFC;
 }
 
-#portfolioList table td img {
+.portfolioList table td img {
   display: block;
 }
 
-#portfolioList table td.access-btn {
+.portfolioList table td.access-btn {
   text-align: center;
   vertical-align: middle;
 }
 
-#portfolioList table td.access-btn img {
+.portfolioList table td.access-btn img {
   margin: auto;
 }
 
-#portfolioList table td.edit-btn {
+.portfolioList table td.edit-btn {
   vertical-align: middle;
 }
 
@@ -378,28 +383,40 @@ footer {
 .chrome-tabs .chrome-tab {
 	float: left;
 	width: 160px;
+  height: 35px;
 	position: relative;
 	border-left: 1px solid #ccc;
 	border-right: 1px solid #ccc;
-	margin-right: 5px;
+  border-top: 1px solid #ccc;
+	margin-right: -1px;
+  margin-top: -1px;
 	background: #f7f7f7;
-	box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 -1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
 }
 
 .chrome-tabs .chrome-tab.active {
-	z-index: 2500
+	z-index: 2500;
 }
 
 .chrome-tabs .chrome-tab .chrome-tab-title {
-	padding: 0 10px;
-	background: #f7f7f7;
+	padding: 0 15px;
 	margin-bottom: -1px;
+  color: #222;
+  background-image: linear-gradient(center top , #EEE, #f7f7f7);
+  background-image: -webkit-linear-gradient(center top , #EEE, #f7f7f7);
+  background-image: -moz-linear-gradient(center top , #EEE, #f7f7f7);
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  height: 32px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .chrome-tabs .chrome-tab .chrome-tab-close:before {
 	content: "\00D7";
 	position: absolute;
-	right: 5px;
+	right: 8px;
 	top: 0;
 }
 
@@ -412,6 +429,43 @@ footer {
 	background-image: -webkit-linear-gradient(top, #ebebeb, #ebebeb);
 	border-bottom: 1px solid #ccc;
 	z-index: 1500;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.second-nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  z-index: 9999;
+  background: #EAEEF0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.menuSelect {
+  color: #005495;
+  float: left;
+  line-height: 35px;
+}
+
+.second-nav ul{
+  display: block;
+  clear: both;
+}
+
+#formPage {
+  position: relative;
 }
 
 #formPageFooter {

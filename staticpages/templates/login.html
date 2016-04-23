@@ -39,8 +39,73 @@
         <div id="tabWrapper">
           <div class="tab current" tabName="Portfolio">
             <div id="formPage">
+              <div class="second-nav">
+                <div class="second-nav-header">
+                  <div class="menuSandwich"><a href="#"></a></div>
+                  <div class="menuSelect">Select a View</div>
+                </div>
+                <ul>
+                  <li>
+                    <div class="item expandable clickable">
+                      <a href="#">All Active Projects</a>
+                    </div>
+                    <ul>
+                      <li>
+                        <div class="item clickable">
+                          <a href="#">By Status
+                          </a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item clickable">
+                          <a href="#">By Region<a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item clickable">
+                          <a href="#">By Territory</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="item expandable clickable">
+                      <a href="#">Pre-Construction Projects</a>
+                    </div>
+                    <ul>
+                      <li>
+                        <div class="item clickable">
+                          <a href="#">By Region</a>
+                        </div>
+                      </li>
+                      <li>By Territory</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="expandable clickable">Construction Projects</div>
+                    <ul>
+                      <li>By Region</li>
+                      <li>By Territory</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="expandable clickable">Close-out Projects</div>
+                    <ul>
+                      <li>By Region</li>
+                      <li>By Territory</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="expandable clickable">Closed Projects</div>
+                    <ul>
+                      <li>By Region</li>
+                      <li>By Territory</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
               <div id="menuCell">
-                <div id="menuSandwich">
+                <div class="menuSandwich">
                   <a href="#">
                   </a>
                 </div>
@@ -68,28 +133,28 @@
                 </div>
 								<div class="chrome-shell-bottom-bar"></div>
 								<div class="chrome-tabs">
-									<div class="chrome-tab">
+									<div class="chrome-tab" tabContentNum="1">
 										<div class="chrome-tab-favicon"></div>
 										<div class="chrome-tab-title">View Files</div>
 										<div class="chrome-tab-close"></div>
 										<div class="chrome-tab-curves"></div>
 									</div>
-									<div class="chrome-tab active">
+									<div class="chrome-tab active" tabContentNum="2">
 										<div class="chrome-tab-favicon"></div>
 										<div class="chrome-tab-title">All Active Projects</div>
 										<div class="chrome-tab-close"></div>
 										<div class="chrome-tab-curves"></div>
 									</div>
-									<div class="chrome-tab">
+									<div class="chrome-tab" tabContentNum="3">
 										<div class="chrome-tab-favicon"></div>
 										<div class="chrome-tab-title">Search Files</div>
 										<div class="chrome-tab-close"></div>
 										<div class="chrome-tab-curves"></div>
 									</div>
 								</div>
-								
+
               </div>
-							<div id="portfolioList" class="tab-content active">
+							<div class="portfolioList tab-content active" tabContentNum="2">
                 <table cellpadding="0" cellspacing="0">
                   <tr class="header-row">
                     <th></th>
@@ -108,24 +173,60 @@
                     <td>In Progress</td>
                   </tr>
                   <tr>
-                    <td></td>
-                    <td></td>
+                    <td class="access-btn"><img src="/static/img/access.png" /></td>
+                    <td class="edit-btn"><img src="/static/img/open-form.png" /></td>
                     <td>0003</td>
                     <td>Job 056</td>
                     <td>Excavation</td>
                     <td>In Progress</td>
                   </tr>
                   <tr>
-                    <td></td>
-                    <td></td>
+                    <td class="access-btn"><img src="/static/img/access.png" /></td>
+                    <td class="edit-btn"><img src="/static/img/open-form.png" /></td>
                     <td>0004</td>
                     <td>Job 060</td>
                     <td>Excavation</td>
                     <td>In Progress</td>
                   </tr>
                   <tr>
-                    <td></td>
-                    <td></td>
+                    <td class="access-btn"><img src="/static/img/access.png" /></td>
+                    <td class="edit-btn"><img src="/static/img/open-form.png" /></td>
+                    <td>0005</td>
+                    <td>Job 076</td>
+                    <td>Excavation</td>
+                    <td>In Progress</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="portfolioList tab-content" tabContentNum="3">
+                <table cellpadding="0" cellspacing="0">
+                  <tr class="header-row">
+                    <th></th>
+                    <th class="alignLeft">Edit</th>
+                    <th>Number</th>
+                    <th>Name</th>
+                    <th>Type Of Building</th>
+                    <th>Project Status</th>
+                  </tr>
+                  <tr class="content-row">
+                    <td class="access-btn"><img src="/static/img/access.png" /></td>
+                    <td class="edit-btn"><img src="/static/img/open-form.png" /></td>
+                    <td>0002</td>
+                    <td>GME Ltd.</td>
+                    <td>Excavation</td>
+                    <td>In Progress</td>
+                  </tr>
+                  <tr>
+                    <td class="access-btn"><img src="/static/img/access.png" /></td>
+                    <td class="edit-btn"><img src="/static/img/open-form.png" /></td>
+                    <td>0004</td>
+                    <td>Job 060</td>
+                    <td>Excavation</td>
+                    <td>In Progress</td>
+                  </tr>
+                  <tr>
+                    <td class="access-btn"><img src="/static/img/access.png" /></td>
+                    <td class="edit-btn"><img src="/static/img/open-form.png" /></td>
                     <td>0005</td>
                     <td>Job 076</td>
                     <td>Excavation</td>
@@ -156,6 +257,7 @@
   <script src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
   <script>
   $(document).ready(function() {
+    /* Start of Top Menu Events */
     $("#current-area").click(function(event) {
       event.preventDefault();
       if ($("#main-nav").css('display') == 'none') {
@@ -175,6 +277,10 @@
       $("#main-nav").css('display', 'none');
     });
 
+    /* End of Top Menu Events */
+
+    /* Start of Account Events */
+
     $("#account-div").click(function(event) {
       event.preventDefault();
       if ($("#account-div ul").css('display') == 'none') {
@@ -191,6 +297,16 @@
 
     $("#account-div").mouseleave(function() {
       $("#account-div ul").css('display', 'none');
+    });
+
+    /* End of Account Events */
+
+    $(".chrome-tabs .chrome-tab").click(function(event) {
+      var tabContentNum = $(this).attr("tabContentNum");
+      $(".tab-content").removeClass("active");
+      $(".tab-content[tabContentNum='"+tabContentNum+"']").addClass("active");
+      $(".chrome-tabs .chrome-tab").removeClass("active");
+      $(this).addClass("active");
     });
   });
   </script>
